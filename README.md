@@ -1,6 +1,6 @@
 # postcss-pxtovpt
 
-> 基于 [evrone/postcss-px-to-viewport](https://github.com/evrone/postcss-px-to-viewport) 项目编写，使用 Typescript 和 PostCss8 重构
+> 基于 [evrone/postcss-px-to-viewport](https://github.com/evrone/postcss-px-to-viewport) 项目编写，使用 Typescript 和 PostCss8 重构。
 
 **注意：因为使用 PostCss 8 重构，所以不支持 v8 以下，如使用 v8 以下的 PostCss 版本，请使用[evrone/postcss-px-to-viewport](https://github.com/evrone/postcss-px-to-viewport)。**
 
@@ -78,19 +78,13 @@
 使用 npm 安装
 
 ```
-$ npm install @niko/postcss-pxtovpt --save-dev
+$ npm install @nikonee/postcss-pxtovpt --save-dev
 ```
 
 使用 yarn 进行安装
 
 ```
-$ yarn add -D @niko/postcss-pxtovpt
-```
-
-使用 pnpm 进行安装
-
-```
-$ pnpm add -D @niko/postcss-pxtovpt
+$ yarn add -D @nikonee/postcss-pxtovpt
 ```
 
 ### 配置参数
@@ -155,14 +149,14 @@ $ pnpm add -D @niko/postcss-pxtovpt
 
 #### `rules` option
 
-根据路径来自定义规则覆盖
+根据路径来自定义规则进行覆盖
 Example:
 
 ```js
 module.exports = {
   plugins: {
     // ...
-    '@niko/postcss-pxtovpt': {
+    '@nikonee/postcss-pxtovpt': {
       // ...otherOptions
       rules: [
         [
@@ -189,7 +183,7 @@ Example:
 module.exports = {
   plugins: {
     // ...
-    '@niko/postcss-pxtovpt': {
+    '@nikonee/postcss-pxtovpt': {
       // ...otherOptions
       mediaQuery: /min\-width/, // 或者
       mediaQuery: [/min\-width/, /max\-width/]
@@ -200,7 +194,7 @@ module.exports = {
 
 #### Ignoring
 
-您可以使用特殊注释来忽略单行的转换：
+可以使用特殊注释来忽略单行的转换：
 
 - `/* px-to-viewport-ignore-next */` — 在单行的上方，防止在下一行进行转换。
 - `/* px-to-viewport-ignore */` — 在右边的属性之后，防止在同一行转换。
@@ -226,8 +220,7 @@ Example:
 }
 ```
 
-There are several more reasons why your pixels may not convert, the following options may affect this:
-`propList`, `selectorBlackList`, `minPixelValue`, `mediaQuery`, `exclude`, `include`.
+> 如果你写的像素单位不能转换, 以下配置项可能有影响：`propList`, `selectorBlackList`, `minPixelValue`, `mediaQuery`, `exclude`, `include`.
 
 #### 使用 PostCss 配置文件时
 
@@ -237,7 +230,7 @@ There are several more reasons why your pixels may not convert, the following op
 module.exports = {
   plugins: {
     // ...
-    '@niko/postcss-pxtovpt': {
+    '@nikonee/postcss-pxtovpt': {
       // options
     }
   }
@@ -251,7 +244,7 @@ module.exports = {
 ```js
 var gulp = require('gulp')
 var postcss = require('gulp-postcss')
-var pxtoviewport = require('@niko/postcss-pxtovpt')
+var pxtoviewport = require('@nikonee/postcss-pxtovpt')
 
 gulp.task('css', function () {
   var processors = [
@@ -273,27 +266,19 @@ gulp.task('css', function () {
 为了跑测试案例，您需要安装开发套件:
 
 ```
-$ npm install
+$ yarn install
 ```
 
 然后输入下面的命令:
 
 ```
-$ npm run test
+$ yarn test
 ```
-
-## Changelog
-
-变更日志在 [这](CHANGELOG.md).
-
-## 版本跟踪
-
-使用 [SemVer](http://semver.org/) 做版本跟踪， 可用版本可在[这](https://github.com/nikonee/postcss-pxtovpt/tags)看到
 
 ## 许可
 
 本项目使用 [MIT License](LICENSE).
 
-## 借鉴自
+## 参考
 
 - [evrone/postcss-px-to-viewport](https://github.com/evrone/postcss-px-to-viewport)
