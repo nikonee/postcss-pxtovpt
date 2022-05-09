@@ -1,6 +1,6 @@
 {
   "name": "@nikonee/postcss-pxtovpt",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A CSS post-processor that converts px to viewport units (vw, vh, vmin, vmax).",
   "author": "nikonee <fei332085762@gmail.com>",
   "license": "MIT",
